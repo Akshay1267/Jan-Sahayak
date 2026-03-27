@@ -1510,7 +1510,7 @@ h4 { font-size: 1.1rem; }
     padding-bottom: 88px;
   }
 
-  .grid-2. .grid-3, .grid-4 {
+  .grid-2, .grid-3, .grid-4 {
     grid-template-columns: 1fr;
   }
 
