@@ -15,13 +15,20 @@ export default function CameraPage() {
   const startCamera = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
-      videoRef.current.srcObject = stream;
       streamRef.current = stream;
       setStreaming(true);
       setCaptured(null);
       setResult(null);
-    } catch (err) { addToast('Camera access denied: ' + err.message, 'error'); }
+    } catch (err) { 
+      addToast('Camera access denied: ' + err.message, 'error'); 
+    }
   };
+
+  React.useEffect(() => {
+    if (streaming && videoRef.current && streamRef.current) {
+      videoRef.current.srcObject = streamRef.current;
+    }
+  }, [streaming]);
 
   const stopCamera = () => {
     streamRef.current?.getTracks().forEach(t => t.stop());
