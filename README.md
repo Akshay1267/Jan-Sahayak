@@ -66,25 +66,33 @@ jan-sahayak/
 To get the project up and running locally:
 
 ### 1. Prerequisites
+
 Ensure you have Node.js and npm installed on your system.
 
 ### 2. Installation
+
 Clone the repository and install the dependencies:
+
 ```bash
 npm install
 ```
 
 ### 3. Environment Setup
+
 Create a `.env` file in the root directory (you can use `.env.backup` as a reference if available) and add your API keys:
+
 ```env
 VITE_GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
 ### 4. Run Development Server
+
 Start the Vite development server:
+
 ```bash
 npm run dev
 ```
+
 The application will be available at `http://localhost:5173`.
 
 ## 👥 Team
@@ -97,4 +105,5 @@ The application will be available at `http://localhost:5173`.
 This project was built dynamically during the **Hack Heist Hackathon**. Feel free to fork the repository, open issues, and submit pull requests if you want to expand the platform's vision!
 
 ---
-*Built with ❤️ to empower every citizen.*
+
+_Built with ❤️ to empower every citizen. A team project'_
