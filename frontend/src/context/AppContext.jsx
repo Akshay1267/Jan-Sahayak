@@ -18,6 +18,7 @@ export function AppProvider({ children }) {
   const [apiKey, setApiKey] = useState(() => import.meta.env.VITE_GEMINI_API_KEY || localStorage.getItem('jansahayak_gemini_key') || '');
   const [elevenLabsKey, setElevenLabsKey] = useState(() => import.meta.env.VITE_ELEVENLABS_API_KEY || localStorage.getItem('jansahayak_eleven_key') || '');
   const [toasts, setToasts] = useState([]);
+  const [theme, setTheme] = useState(() => localStorage.getItem('jansahayak_theme') || 'light');
 
   useEffect(() => {
     localStorage.setItem('jansahayak_vault', JSON.stringify(medVault));
@@ -26,6 +27,11 @@ export function AppProvider({ children }) {
   useEffect(() => {
     localStorage.setItem('jansahayak_reminders', JSON.stringify(reminders));
   }, [reminders]);
+
+  useEffect(() => {
+    localStorage.setItem('jansahayak_theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
   const addToast = (message, type = 'info') => {
     const id = Date.now();
@@ -57,7 +63,7 @@ export function AppProvider({ children }) {
       userProfile, setUserProfile, healthFlags, setHealthFlags,
       medVault, addToVault, reminders, addReminder, setReminders,
       apiKey, setApiKey, elevenLabsKey, setElevenLabsKey,
-      toasts, addToast, t
+      toasts, addToast, theme, setTheme, t
     }}>
       {children}
     </AppContext.Provider>

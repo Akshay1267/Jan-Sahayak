@@ -1,69 +1,73 @@
 /* ============================================
-   JanSahayak Design System
-   Premium Dark Glassmorphism Theme
+   JanSahayak Design System: The Digital Sanctuary
+   Premium Light Mode Editorial Theme
    ============================================ */
 
 /* CSS Custom Properties */
 :root {
-  /* Primary Colors */
-  --primary: #6C63FF;
-  --primary-light: #8B83FF;
-  --primary-dark: #4F46E5;
-  --primary-glow: rgba(108, 99, 255, 0.3);
+  /* Primary Colors - Teal Sanctuary */
+  --primary: #006492;
+  --primary-light: #2D9CDB;
+  --primary-dark: #004b6f;
+  --primary-glow: rgba(0, 100, 146, 0.1);
 
   /* Accent Colors */
   --accent-emerald: #10B981;
-  --accent-amber: #F59E0B;
-  --accent-rose: #F43F5E;
+  --accent-amber: #F2994A;
+  --accent-rose: #ba1a1a;
   --accent-cyan: #06B6D4;
-  --accent-orange: #F97316;
-  --accent-pink: #EC4899;
+  --accent-saffron: #ffa454;
 
-  /* Background Colors */
-  --bg-primary: #0A0A1A;
-  --bg-secondary: #111128;
-  --bg-tertiary: #1A1A3E;
-  --bg-card: rgba(26, 26, 62, 0.6);
-  --bg-card-hover: rgba(40, 40, 80, 0.7);
-  --bg-glass: rgba(255, 255, 255, 0.05);
-  --bg-glass-strong: rgba(255, 255, 255, 0.1);
+  /* Background & Surface Hierarchy (The Layering Principle) */
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #f3f4f5;
+  --bg-tertiary: #edeeef;
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.8);
+  --bg-glass-strong: rgba(255, 255, 255, 0.9);
+  
+  /* Tonal Surface Tokens */
+  --surface-low: #f3f4f5;
+  --surface-container: #edeeef;
+  --surface-high: #e7e8e9;
+  --surface-highest: #e1e3e4;
+  --surface-lowest: #ffffff;
 
-  /* Text Colors */
-  --text-primary: #F1F1F8;
-  --text-secondary: #A0A0C0;
-  --text-muted: #6B6B8D;
-  --text-accent: #6C63FF;
+  /* Text Colors - Editorial Voice */
+  --text-primary: #191c1d;
+  --text-secondary: #3f4850;
+  --text-muted: #6f7881;
+  --text-accent: #006492;
 
-  /* Border Colors */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-light: rgba(255, 255, 255, 0.12);
-  --border-active: rgba(108, 99, 255, 0.4);
+  /* Border Colors (The "No-Line" Rule: We use these sparingly/transparently) */
+  --border-subtle: rgba(111, 120, 129, 0.08);
+  --border-light: rgba(111, 120, 129, 0.12);
+  --border-active: rgba(0, 100, 146, 0.3);
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #6C63FF 0%, #4F46E5 100%);
-  --gradient-hero: linear-gradient(135deg, #6C63FF 0%, #EC4899 50%, #F59E0B 100%);
+  --gradient-primary: linear-gradient(135deg, #006492 0%, #2D9CDB 100%);
+  --gradient-hero: linear-gradient(135deg, #006492 0%, #2D9CDB 100%);
   --gradient-health: linear-gradient(135deg, #10B981 0%, #06B6D4 100%);
-  --gradient-scheme: linear-gradient(135deg, #F59E0B 0%, #F97316 100%);
-  --gradient-danger: linear-gradient(135deg, #F43F5E 0%, #EC4899 100%);
-  --gradient-card: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(236, 72, 153, 0.05) 100%);
+  --gradient-scheme: linear-gradient(135deg, #F2994A 0%, #ffa454 100%);
+  --gradient-danger: linear-gradient(135deg, #ba1a1a 0%, #ff5449 100%);
+  --gradient-card: linear-gradient(135deg, rgba(0, 100, 146, 0.03) 0%, rgba(45, 156, 219, 0.01) 100%);
 
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 20px rgba(108, 99, 255, 0.3);
-  --shadow-glow-emerald: 0 0 20px rgba(16, 185, 129, 0.3);
+  /* Shadows - Ambient & Diffused */
+  --shadow-sm: 0 2px 12px rgba(0, 50, 73, 0.04);
+  --shadow-md: 0 12px 32px rgba(0, 100, 146, 0.06);
+  --shadow-lg: 0 24px 64px rgba(0, 100, 146, 0.1);
+  --shadow-glow: 0 0 20px rgba(0, 100, 146, 0.15);
 
-  /* Spacing */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
+  /* Spacing - Breathable & Airy */
+  --space-xs: 0.35rem;
+  --space-sm: 0.7rem;
+  --space-md: 1.4rem;
+  --space-lg: 2.1rem;
+  --space-xl: 3.5rem;
+  --space-2xl: 5.5rem;
 
-  /* Border Radius */
+  /* Border Radius - APPROACHABLE & SAFE */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -71,7 +75,7 @@
   --radius-full: 9999px;
 
   /* Typography */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-primary: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
   --font-hindi: 'Noto Sans Devanagari', sans-serif;
 
   /* Transitions */
@@ -84,6 +88,44 @@
   --z-modal: 200;
   --z-toast: 300;
   --z-navbar: 50;
+}
+
+/* Dark Mode Overrides - The Midnight Sanctuary */
+[data-theme='dark'] {
+  /* Background & Surface Hierarchy */
+  --bg-primary: #0a0c0d;
+  --bg-secondary: #0f1112;
+  --bg-tertiary: #141718;
+  --bg-card: #181b1d;
+  --bg-card-hover: #1e2224;
+  --bg-glass: rgba(10, 12, 13, 0.7);
+  --bg-glass-strong: rgba(15, 17, 18, 0.85);
+
+  --surface-low: #141718;
+  --surface-container: #1c2022;
+  --surface-high: #262b2d;
+  --surface-highest: #303639;
+  --surface-lowest: #0a0c0d;
+
+  /* Text Colors */
+  --text-primary: #f8f9fa;
+  --text-secondary: #97a0a6;
+  --text-muted: #616e78;
+  --text-accent: #2D9CDB;
+
+  /* Border Colors */
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-active: rgba(45, 156, 219, 0.4);
+
+  /* Shadows - Ambient with primary depth */
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(0, 100, 146, 0.25);
+
+  /* Special Gradient for Dark Mode Cards */
+  --gradient-card: linear-gradient(135deg, rgba(45, 156, 219, 0.05) 0%, rgba(0, 100, 146, 0.02) 100%);
 }
 
 /* ============================================
@@ -110,28 +152,13 @@ body {
   overflow-x: hidden;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(ellipse at 20% 20%, rgba(108, 99, 255, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(236, 72, 153, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 50%, rgba(16, 185, 129, 0.04) 0%, transparent 60%);
-  pointer-events: none;
-  z-index: 0;
-}
-
 #root {
   position: relative;
   z-index: 1;
 }
 
-a { color: var(--primary-light); text-decoration: none; }
-a:hover { color: var(--primary); }
+a { color: var(--primary); text-decoration: none; }
+a:hover { color: var(--primary-light); }
 
 img { max-width: 100%; display: block; }
 
@@ -140,8 +167,8 @@ img { max-width: 100%; display: block; }
    ============================================ */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
-::-webkit-scrollbar-thumb { background: var(--primary-dark); border-radius: var(--radius-full); }
-::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+::-webkit-scrollbar-thumb { background: var(--surface-high); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-light); }
 
 /* ============================================
    Typography
@@ -182,9 +209,9 @@ h4 { font-size: 1.1rem; }
 
 .main-content {
   flex: 1;
-  padding: var(--space-lg);
-  padding-top: 80px;
-  padding-bottom: 100px;
+  padding: var(--space-xl) var(--space-md);
+  padding-top: 100px;
+  padding-bottom: 120px;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -192,39 +219,45 @@ h4 { font-size: 1.1rem; }
 
 .page-header {
   margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
 }
 
 .page-header h1 {
+  font-size: 2.8rem;
   margin-bottom: var(--space-sm);
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
 }
 
 .page-header p {
   color: var(--text-secondary);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
+  max-width: 600px;
 }
 
 .section-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--primary);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.12em;
   margin-bottom: var(--space-md);
+  opacity: 0.8;
 }
 
 /* ============================================
-   Navbar
+   Navbar - The Floating Header
    ============================================ */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 64px;
-  background: rgba(10, 10, 26, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-subtle);
+  height: 80px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 2px solid rgba(0, 100, 146, 0.04);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -236,19 +269,21 @@ h4 { font-size: 1.1rem; }
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 800;
+  letter-spacing: -0.03em;
 }
 
 .navbar-logo .logo-icon {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   background: var(--gradient-primary);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  color: white;
+  box-shadow: 0 8px 16px rgba(0, 100, 146, 0.15);
 }
 
 .navbar-actions {
@@ -260,57 +295,39 @@ h4 { font-size: 1.1rem; }
 .lang-selector {
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
-  background: var(--bg-glass);
-  border: 1px solid var(--border-subtle);
+  gap: 4px;
+  background: var(--surface-low);
   border-radius: var(--radius-full);
   padding: 4px;
-}
-
-.lang-btn {
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-  border: none;
-  background: transparent;
-  color: var(--text-secondary);
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition-fast);
-}
-
-.lang-btn.active {
-  background: var(--primary);
-  color: white;
 }
 
 .anon-toggle {
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
-  background: var(--bg-glass);
-  border: 1px solid var(--border-subtle);
+  gap: var(--space-sm);
+  background: var(--surface-low);
+  border: none;
   border-radius: var(--radius-full);
-  padding: 6px 14px;
+  padding: 8px 18px;
   color: var(--text-secondary);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   cursor: pointer;
-  transition: var(--transition-fast);
-  font-weight: 500;
+  transition: var(--transition-base);
+  font-weight: 700;
 }
 
 .anon-toggle.active {
-  background: rgba(108, 99, 255, 0.2);
-  border-color: var(--primary);
-  color: var(--primary-light);
+  background: var(--primary);
+  color: white;
+  box-shadow: var(--shadow-glow);
 }
 
 .settings-btn {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--radius-full);
-  border: 1px solid var(--border-subtle);
-  background: var(--bg-glass);
+  border: none;
+  background: var(--surface-low);
   color: var(--text-secondary);
   display: flex;
   align-items: center;
@@ -320,8 +337,8 @@ h4 { font-size: 1.1rem; }
 }
 
 .settings-btn:hover {
-  background: var(--bg-glass-strong);
-  color: var(--text-primary);
+  background: var(--surface-container);
+  color: var(--primary);
 }
 
 /* ============================================
@@ -332,10 +349,10 @@ h4 { font-size: 1.1rem; }
   bottom: 0;
   left: 0;
   right: 0;
-  height: 72px;
-  background: rgba(10, 10, 26, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  height: 80px;
+  background: var(--bg-glass-strong);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border-top: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
@@ -348,122 +365,115 @@ h4 { font-size: 1.1rem; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--radius-md);
+  gap: 4px;
+  padding: var(--space-sm);
+  border-radius: var(--radius-lg);
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: var(--transition-base);
   color: var(--text-muted);
   background: transparent;
   border: none;
   font-family: var(--font-primary);
-  min-width: 60px;
+  min-width: 64px;
 }
 
 .nav-item:hover {
-  color: var(--text-secondary);
-  background: var(--bg-glass);
+  color: var(--primary);
+  background: var(--surface-low);
 }
 
 .nav-item.active {
-  color: var(--primary-light);
-  background: rgba(108, 99, 255, 0.12);
+  color: var(--primary);
+  background: var(--primary-glow);
 }
 
 .nav-item .nav-icon {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   display: flex;
   align-items: center;
 }
 
 .nav-item .nav-label {
-  font-size: 0.65rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.08em;
 }
 
 /* ============================================
-   Glass Card
+   The Sanctuary Card (Glass/Surface Redesign)
    ============================================ */
 .glass-card {
-  background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
+  background: var(--surface-lowest);
+  border: 1px solid rgba(0, 100, 146, 0.05); /* Ghost Border Rule */
+  border-radius: var(--radius-xl);
   padding: var(--space-lg);
-  transition: var(--transition-base);
+  transition: var(--transition-slow);
+  box-shadow: var(--shadow-sm);
 }
 
 .glass-card:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--border-light);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+  border-color: rgba(0, 100, 146, 0.1);
 }
 
 .glass-card.clickable {
   cursor: pointer;
 }
 
-.glass-card.clickable:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-glow);
-}
-
 .glass-card.highlight {
-  border-color: var(--border-active);
-  box-shadow: var(--shadow-glow);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+  border-color: var(--primary-light);
+  box-shadow: var(--shadow-md);
 }
 
 /* ============================================
-   Buttons
+   Editorial Buttons
    ============================================ */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
-  padding: 12px 24px;
+  padding: 1rem 2rem;
   border-radius: var(--radius-md);
   font-family: var(--font-primary);
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: 700;
+  font-size: 1rem;
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: var(--transition-base);
   border: none;
   white-space: nowrap;
+  min-height: 3.5rem; /* Sizing Mandate */
 }
 
 .btn-primary {
   background: var(--gradient-primary);
   color: white;
-  box-shadow: var(--shadow-glow);
+  box-shadow: 0 8px 16px rgba(0, 100, 146, 0.15);
 }
 
 .btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 0 30px rgba(108, 99, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 100, 146, 0.25);
 }
 
 .btn-secondary {
-  background: var(--bg-glass-strong);
-  color: var(--text-primary);
-  border: 1px solid var(--border-light);
+  background: var(--surface-low);
+  color: var(--primary);
+  border: 1px solid rgba(0, 100, 146, 0.1);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--surface-container);
+  transform: translateY(-2px);
 }
 
 .btn-success {
   background: var(--gradient-health);
   color: white;
-}
-
-.btn-success:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-glow-emerald);
+  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.15);
 }
 
 .btn-danger {
@@ -473,8 +483,13 @@ h4 { font-size: 1.1rem; }
 
 .btn-outline {
   background: transparent;
-  border: 1px solid var(--border-light);
-  color: var(--text-primary);
+  border: 2px solid var(--primary-light);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary-glow);
+  transform: translateY(-2px);
 }
 
 .btn-outline:hover {
@@ -508,156 +523,136 @@ h4 { font-size: 1.1rem; }
 }
 
 /* ============================================
-   Form Elements
+   Form Elements - Conversational & Soft
    ============================================ */
 .form-group {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .form-label {
   display: block;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 700;
   color: var(--text-secondary);
-  margin-bottom: var(--space-sm);
+  margin-bottom: 0.5rem;
+  padding-left: 0.2rem;
 }
 
 .form-input, .form-select, .form-textarea {
   width: 100%;
-  padding: 12px 16px;
-  background: var(--bg-glass);
-  border: 1px solid var(--border-subtle);
+  padding: 1rem 1.25rem;
+  background: var(--surface-high);
+  border: 2px solid transparent;
   border-radius: var(--radius-md);
   color: var(--text-primary);
   font-family: var(--font-primary);
-  font-size: 0.95rem;
-  transition: var(--transition-fast);
+  font-size: 1rem;
+  transition: var(--transition-base);
 }
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px var(--primary-glow);
-  background: var(--bg-glass-strong);
+  background: var(--surface-lowest);
+  border-color: var(--primary-light);
+  box-shadow: var(--shadow-sm);
 }
 
 .form-input::placeholder {
   color: var(--text-muted);
+  opacity: 0.6;
 }
 
 .form-select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23A0A0C0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23006492' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 18px;
-  padding-right: 40px;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+  padding-right: 3rem;
 }
 
 .form-select option {
-  background: var(--bg-secondary);
+  background: white;
   color: var(--text-primary);
 }
 
 .form-textarea {
-  min-height: 100px;
+  min-height: 120px;
   resize: vertical;
 }
 
 /* ============================================
-   Badges & Tags
+   Badges - The High-End Polish
    ============================================ */
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 4px 12px;
+  gap: 6px;
+  padding: 6px 14px;
   border-radius: var(--radius-full);
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 0.7rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.1em;
 }
 
 .badge-primary {
-  background: rgba(108, 99, 255, 0.2);
-  color: var(--primary-light);
+  background: var(--primary);
+  color: white;
 }
 
 .badge-success {
-  background: rgba(16, 185, 129, 0.2);
-  color: var(--accent-emerald);
+  background: rgba(16, 185, 129, 0.1);
+  color: #065f46;
 }
 
 .badge-warning {
-  background: rgba(245, 158, 11, 0.2);
-  color: var(--accent-amber);
+  background: var(--accent-saffron);
+  color: #713b00;
 }
 
 .badge-danger {
-  background: rgba(244, 63, 94, 0.2);
-  color: var(--accent-rose);
+  background: #ffdad6;
+  color: #410002;
 }
 
 .badge-info {
-  background: rgba(6, 182, 212, 0.2);
-  color: var(--accent-cyan);
+  background: var(--primary-glow);
+  color: var(--primary);
 }
 
 /* ============================================
-   Health Status Indicators
-   ============================================ */
-.status-normal {
-  color: var(--accent-emerald);
-}
-
-.status-warning {
-  color: var(--accent-amber);
-}
-
-.status-danger {
-  color: var(--accent-rose);
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.status-dot.normal { background: var(--accent-emerald); }
-.status-dot.warning { background: var(--accent-amber); }
-.status-dot.danger { background: var(--accent-rose); }
-
-/* ============================================
-   Upload Zone
+   Upload Zone - Breathable Drag & Drop
    ============================================ */
 .upload-zone {
-  border: 2px dashed var(--border-light);
+  border: 3px dashed var(--surface-high);
   border-radius: var(--radius-xl);
-  padding: var(--space-3xl);
+  padding: var(--space-2xl) var(--space-xl);
   text-align: center;
   cursor: pointer;
-  transition: var(--transition-base);
-  background: var(--bg-glass);
+  transition: var(--transition-slow);
+  background: var(--surface-low);
 }
 
 .upload-zone:hover {
-  border-color: var(--primary);
-  background: rgba(108, 99, 255, 0.05);
+  border-color: var(--primary-light);
+  background: white;
+  transform: scale(1.01);
+  box-shadow: var(--shadow-md);
 }
 
 .upload-zone.drag-over {
   border-color: var(--primary);
-  background: rgba(108, 99, 255, 0.1);
+  background: var(--primary-glow);
   box-shadow: var(--shadow-glow);
 }
 
 .upload-zone .upload-icon {
-  font-size: 3rem;
-  color: var(--primary-light);
-  margin-bottom: var(--space-md);
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  color: var(--primary);
+  opacity: 0.8;
 }
 
 .upload-zone p {
@@ -671,75 +666,79 @@ h4 { font-size: 1.1rem; }
 }
 
 /* ============================================
-   Result Cards
+   Result Cards - Tonal Separation
    ============================================ */
 .result-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  background: var(--surface-lowest);
   border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  margin-bottom: var(--space-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-sm);
   transition: var(--transition-base);
+  box-shadow: var(--shadow-sm);
 }
 
 .result-card:hover {
-  border-color: var(--border-light);
-  box-shadow: var(--shadow-sm);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
 }
 
 .result-card .result-header {
   display: flex;
   align-items: center;
   gap: var(--space-md);
-  margin-bottom: var(--space-md);
+  margin-bottom: 1rem;
 }
 
 .result-card .result-icon {
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--surface-low);
   font-size: 1.5rem;
   flex-shrink: 0;
 }
 
 .result-card .result-title {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 .result-card .result-subtitle {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
+  font-weight: 500;
 }
 
 .result-card .result-body {
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
 .result-card .result-actions {
   display: flex;
-  gap: var(--space-sm);
-  margin-top: var(--space-md);
+  gap: 0.5rem;
+  margin-top: 1.5rem;
   flex-wrap: wrap;
 }
 
 /* ============================================
-   Scheme Card
+   Scheme Card - Tonal Hierarchies
    ============================================ */
 .scheme-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  margin-bottom: var(--space-md);
-  transition: var(--transition-base);
+  background: var(--surface-lowest);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition-slow);
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 .scheme-card::before {
@@ -747,20 +746,18 @@ h4 { font-size: 1.1rem; }
   position: absolute;
   top: 0;
   left: 0;
-  width: 4px;
+  width: 8px;
   height: 100%;
-  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
 }
 
 .scheme-card.health::before { background: var(--gradient-health); }
 .scheme-card.finance::before { background: var(--gradient-scheme); }
 .scheme-card.education::before { background: var(--gradient-primary); }
-.scheme-card.housing::before { background: var(--accent-orange); }
+.scheme-card.housing::before { background: var(--accent-amber); }
 
 .scheme-card:hover {
-  border-color: var(--border-light);
-  transform: translateX(4px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
 }
 
 .scheme-card .scheme-emoji {
@@ -797,36 +794,36 @@ h4 { font-size: 1.1rem; }
 }
 
 /* ============================================
-   Doctor Card
+   Doctor Card - Tonal Surface Approach
    ============================================ */
 .doctor-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
+  background: var(--surface-lowest);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
   display: flex;
-  gap: var(--space-lg);
-  transition: var(--transition-base);
+  gap: 1.5rem;
+  transition: var(--transition-slow);
   align-items: center;
+  box-shadow: var(--shadow-sm);
 }
 
 .doctor-card:hover {
-  border-color: var(--border-light);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
 
 .doctor-avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: var(--radius-full);
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-xl);
   background: var(--gradient-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   flex-shrink: 0;
   color: white;
-  font-weight: 700;
+  box-shadow: 0 8px 16px rgba(0, 100, 146, 0.1);
 }
 
 .doctor-info {
@@ -834,26 +831,30 @@ h4 { font-size: 1.1rem; }
 }
 
 .doctor-info .doctor-name {
-  font-weight: 700;
-  font-size: 1.05rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 .doctor-info .doctor-specialty {
-  color: var(--primary-light);
-  font-size: 0.85rem;
-  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .doctor-info .doctor-hospital {
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .doctor-info .doctor-meta {
   display: flex;
-  gap: var(--space-md);
-  margin-top: var(--space-xs);
-  font-size: 0.8rem;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
 }
 
@@ -873,69 +874,59 @@ h4 { font-size: 1.1rem; }
 }
 
 /* ============================================
-   Chat Interface
+   Chat Interface - Conversational Light
    ============================================ */
 .chat-container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 220px);
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
+  height: calc(100vh - 240px);
+  background: var(--surface-low);
+  border-radius: var(--radius-xl);
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 .chat-messages {
   flex: 1;
   overflow-y: auto;
-  padding: var(--space-lg);
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: 1.5rem;
 }
 
 .chat-message {
-  max-width: 85%;
-  padding: var(--space-md);
-  border-radius: var(--radius-lg);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  animation: slideUp 0.3s ease;
+  max-width: 80%;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .chat-message.user {
   align-self: flex-end;
   background: var(--gradient-primary);
   color: white;
-  border-bottom-right-radius: var(--space-xs);
+  border-bottom-right-radius: 0.25rem;
+  box-shadow: 0 8px 24px rgba(0, 100, 146, 0.2);
 }
 
 .chat-message.ai {
   align-self: flex-start;
-  background: var(--bg-glass-strong);
-  border: 1px solid var(--border-subtle);
-  border-bottom-left-radius: var(--space-xs);
-}
-
-.chat-message .msg-sender {
-  font-size: 0.75rem;
-  font-weight: 700;
-  margin-bottom: var(--space-xs);
-  opacity: 0.7;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  background: white;
+  color: var(--text-primary);
+  border: 1px solid rgba(0, 100, 146, 0.05);
+  border-bottom-left-radius: 0.25rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .chat-input-area {
   display: flex;
-  gap: var(--space-sm);
-  padding: var(--space-md);
-  border-top: 1px solid var(--border-subtle);
-  background: var(--bg-secondary);
-}
-
-.chat-input-area .form-input {
-  flex: 1;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-top: 1px solid var(--surface-high);
 }
 
 /* ============================================
@@ -1110,62 +1101,64 @@ h4 { font-size: 1.1rem; }
 }
 
 /* ============================================
-   Modal
+   Modal - Tonal Presence
    ============================================ */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
+  background: rgba(25, 28, 29, 0.4); /* Softer overlay */
+  backdrop-filter: blur(12px);
   z-index: var(--z-modal);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-lg);
-  animation: fadeIn 0.2s ease;
+  padding: 1.5rem;
+  animation: fadeIn 0.3s ease;
 }
 
 .modal-content {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
+  background: white;
   border-radius: var(--radius-xl);
-  padding: var(--space-xl);
-  max-width: 560px;
+  padding: 2.5rem;
+  max-width: 600px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
-  animation: slideUp 0.3s ease;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--space-lg);
+  margin-bottom: 2rem;
 }
 
 .modal-header h2 {
-  font-size: 1.3rem;
+  font-size: 1.75rem;
+  letter-spacing: -0.03em;
+  font-weight: 800;
 }
 
 .modal-close {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-full);
-  border: 1px solid var(--border-subtle);
-  background: var(--bg-glass);
+  border: none;
+  background: var(--surface-low);
   color: var(--text-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: var(--transition-fast);
-  font-size: 1.2rem;
+  transition: var(--transition-base);
 }
 
 .modal-close:hover {
-  background: var(--bg-glass-strong);
-  color: var(--text-primary);
+  background: var(--surface-container);
+  color: var(--primary);
+  transform: rotate(90deg);
 }
 
 /* ============================================
@@ -1190,55 +1183,58 @@ h4 { font-size: 1.1rem; }
 }
 
 /* ============================================
-   Feature Cards (Home)
+   The Sanctuary Feature Card (Home)
    ============================================ */
 .feature-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: var(--space-xl);
+  background: var(--surface-lowest);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
   cursor: pointer;
-  transition: var(--transition-base);
+  transition: var(--transition-slow);
   position: relative;
   overflow: hidden;
-}
-
-.feature-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-lg);
-  opacity: 0;
-  transition: var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
 }
 
 .feature-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--border-light);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
 }
 
 .feature-card .feature-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-md);
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
-  margin-bottom: var(--space-md);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  background: var(--surface-low);
+  transition: var(--transition-base);
+}
+
+.feature-card:hover .feature-icon {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.1) rotate(5deg);
 }
 
 .feature-card .feature-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: var(--space-xs);
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
 }
 
 .feature-card .feature-desc {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* ============================================
@@ -1342,93 +1338,108 @@ h4 { font-size: 1.1rem; }
 }
 
 /* ============================================
-   Medical Vault Timeline
+   Medical Vault Timeline - The Tonal Narrative
    ============================================ */
 .timeline {
   position: relative;
-  padding-left: var(--space-xl);
+  padding-left: 3rem;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  left: 12px;
+  left: 1rem;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: var(--border-subtle);
+  width: 4px;
+  background: var(--surface-high);
+  border-radius: var(--radius-full);
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: var(--space-xl);
+  margin-bottom: 3rem;
 }
 
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -20px;
-  top: 6px;
-  width: 12px;
-  height: 12px;
+  left: -2.45rem;
+  top: 0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 50%;
   background: var(--primary);
-  border: 2px solid var(--bg-primary);
+  border: 4px solid white;
+  box-shadow: 0 0 0 4px var(--primary-glow);
 }
 
 .timeline-date {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-bottom: var(--space-xs);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* ============================================
-   Remedy Card
+   Remedy Card - Botanical Polish
    ============================================ */
 .remedy-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  transition: var(--transition-base);
+  background: var(--surface-lowest);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  transition: var(--transition-slow);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(16, 185, 129, 0.05);
 }
 
 .remedy-card:hover {
-  border-color: rgba(16, 185, 129, 0.3);
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
+  transform: translateY(-6px);
+  border-color: rgba(16, 185, 129, 0.2);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.08);
 }
 
 .remedy-card .remedy-icon {
-  font-size: 2rem;
-  margin-bottom: var(--space-sm);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 8px rgba(16, 185, 129, 0.2));
 }
 
 .remedy-card .remedy-name {
-  font-weight: 700;
-  margin-bottom: var(--space-xs);
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 .remedy-card .remedy-for {
-  color: var(--accent-emerald);
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: var(--space-sm);
+  color: #065f46;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: rgba(16, 185, 129, 0.1);
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
 }
 
 .remedy-ingredients {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-xs);
-  margin-bottom: var(--space-md);
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .ingredient-tag {
-  padding: 2px 10px;
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 4px 12px;
+  background: var(--surface-low);
   border-radius: var(--radius-full);
-  font-size: 0.75rem;
-  color: var(--accent-emerald);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
 }
 
 /* ============================================
