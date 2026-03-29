@@ -1,4 +1,6 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../lib/firebase';
 
 // Global App Context
 export const AppContext = createContext();
@@ -8,6 +10,11 @@ export function AppProvider({ children }) {
   const [language, setLanguage] = useState('en');
   const [isAnonymous, setIsAnonymous] = useState(false);
   const [userProfile, setUserProfile] = useState(null);
+  
+  // Firebase Auth State
+  const [currentUser, setCurrentUser] = useState(null);
+  const [authLoading, setAuthLoading] = useState(true);
+
   const [healthFlags, setHealthFlags] = useState([]);
   const [medVault, setMedVault] = useState(() => {
     try { return JSON.parse(localStorage.getItem('jansahayak_vault') || '[]'); } catch { return []; }
@@ -19,6 +26,14 @@ export function AppProvider({ children }) {
   const [elevenLabsKey, setElevenLabsKey] = useState(() => import.meta.env.VITE_ELEVENLABS_API_KEY || localStorage.getItem('jansahayak_eleven_key') || '');
   const [toasts, setToasts] = useState([]);
   const [theme, setTheme] = useState(() => localStorage.getItem('jansahayak_theme') || 'light');
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setCurrentUser(user);
+      setAuthLoading(false);
+    });
+    return unsubscribe;
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('jansahayak_vault', JSON.stringify(medVault));
@@ -61,6 +76,7 @@ export function AppProvider({ children }) {
     <AppContext.Provider value={{
       currentPage, setCurrentPage, language, setLanguage, isAnonymous, setIsAnonymous,
       userProfile, setUserProfile, healthFlags, setHealthFlags,
+      currentUser, authLoading,
       medVault, addToVault, reminders, addReminder, setReminders,
       apiKey, setApiKey, elevenLabsKey, setElevenLabsKey,
       toasts, addToast, theme, setTheme, t

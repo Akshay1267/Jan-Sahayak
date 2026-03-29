@@ -134,10 +134,15 @@ Respond naturally as a voice assistant would. Be:
         </div>
       </div>
 
-      <div className="voice-agent-container">
+      <div className="voice-agent-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
+        {/* AI Avatar Display */}
+        <div className={`ai-avatar-wrapper ${isListening ? 'listening' : ''} ${isSpeaking ? 'speaking' : ''}`}>
+          <img src="/ai-avatar.png" alt="AI Agent" className="ai-avatar-img" />
+        </div>
+
         <div className={`voice-orb ${isListening ? 'listening' : ''} ${isSpeaking ? 'animate-pulse-glow': ''}`}
           onClick={isListening ? stopAndProcess : startListening}
-          style={{ cursor: 'pointer' }}>
+          style={{ cursor: 'pointer', zIndex: 10, alignSelf: 'center' }}>
           {loading ? <Loader size={48} className="animate-spin" style={{ color: 'white' }} /> 
             : isListening ? <MicOff size={48} /> 
             : isSpeaking ? <Volume2 size={48} />

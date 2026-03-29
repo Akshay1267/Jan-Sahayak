@@ -1595,3 +1595,83 @@ h4 { font-size: 1.1rem; }
 .mb-lg { margin-bottom: var(--space-lg); }
 .mb-xl { margin-bottom: var(--space-xl); }
 .hidden { display: none; }
+
+/* ============================================
+   AI Avatar Styles
+   ============================================ */
+.ai-avatar-wrapper {
+  position: relative;
+  width: 340px; /* Big Image */
+  height: 340px; /* Big Image */
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.ai-avatar-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -15px; left: -15px; right: -15px; bottom: -15px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ai-avatar-wrapper.listening::before {
+  opacity: 0.5;
+  animation: pulseGlow 1.5s infinite alternate;
+}
+
+.ai-avatar-wrapper.speaking::before {
+  opacity: 1;
+  animation: voicePulse 1s infinite;
+}
+
+/* Simulated lip-sync / talking animation for a 2D image */
+@keyframes lipSyncSimulate {
+  0% { transform: scaleY(1) translateY(0); }
+  25% { transform: scaleY(1.02) translateY(-2px); }
+  50% { transform: scaleY(0.99) translateY(1px); }
+  75% { transform: scaleY(1.03) translateY(-3px); }
+  100% { transform: scaleY(1) translateY(0); }
+}
+
+.ai-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: var(--shadow-lg);
+  border: 6px solid var(--surface-lowest);
+  transition: transform 0.3s ease;
+  background: var(--surface-low);
+}
+
+.ai-avatar-wrapper.speaking .ai-avatar-img {
+  animation: lipSyncSimulate 0.25s infinite alternate ease-in-out;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate( 14.0deg) }
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate( 14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate( 10.0deg) }
+   60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+.wave-animation {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}

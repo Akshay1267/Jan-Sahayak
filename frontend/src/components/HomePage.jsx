@@ -16,7 +16,11 @@ const features = [
 ];
 
 export default function HomePage() {
-  const { setCurrentPage, t, isAnonymous } = useApp();
+  const { setCurrentPage, t, isAnonymous, currentUser } = useApp();
+
+  const userName = isAnonymous 
+    ? t('Guest', 'अतिथि') 
+    : (currentUser?.displayName || currentUser?.email?.split('@')[0] || t('User', 'उपयोगकर्ता'));
 
   return (
     <div className="animate-fade-in" style={{ paddingBottom: 'var(--space-2xl)' }}>
@@ -28,6 +32,13 @@ export default function HomePage() {
             <div className="badge badge-primary">🔒 {t('Anonymous Mode', 'गुमनाम मोड')}</div>
           )}
         </div>
+        
+        <div style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', marginBottom: '0.5rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <span>{t('Welcome,', 'नमस्ते,')}</span>
+          <span style={{ color: 'var(--text-primary)' }}>{userName}</span>
+          <span className="wave-animation">👋</span>
+        </div>
+
         <h1 style={{ lineHeight: 1.1, marginBottom: '1.5rem' }}>
           {t('Your Health Sanctuary,', 'आपका स्वास्थ्य अभयारण्य,')} <br/>
           <span style={{ color: 'var(--primary)' }}>{t('Powered by AI.', 'AI द्वारा संचालित।')}</span>
