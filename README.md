@@ -1,109 +1,119 @@
 # Jan-Sahayak 🩺🇮🇳
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Jan--Sahayak-blue?style=for-the-badge)](https://jan-sahayak-six.vercel.app/)
+### **Empowering Every Citizen with AI-Driven Health & Welfare**
 
-> **Developed for the Hack Heist Hackathon**
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Jan--Sahayak-blue?style=for-the-badge&logo=vercel)](https://jan-sahayak-six.vercel.app/)
+[![GitHub](https://img.shields.io/badge/Source_Code-GitHub-black?style=for-the-badge&logo=github)](https://github.com/anshul-24/Jan-Sahayak)
 
-Jan-Sahayak is a full-stack, AI-powered citizen health and welfare assistant designed to provide accessible healthcare guidance and scheme recommendations for Indian citizens. Built over a 36-hour hackathon, this platform aims to bridge the gap between complex medical information, government welfare programs, and the general public through an intuitive, multilingual, and premium user interface.
+> **Developed for the Hack Heist Hackathon** 🏆
 
-## 🌟 Key Features
+Jan-Sahayak is a cutting-edge, full-stack AI health assistant designed specifically for the Indian context. It bridges the critical gap between complex medical data, government welfare, and the common citizen. By combining **Google Gemini 2.0**, **ElevenLabs Conversational AI**, and a robust **FastAPI/Supabase** backend, Jan-Sahayak provides a seamless, multilingual, and highly accessible healthcare experience.
 
-The application is structured as a robust Single Page Application (SPA) offering a suite of AI-driven capabilities:
+---
 
-1. **🏥 Medical Report Analysis (`MedReportPage`)**: Upload medical reports to receive simplified, jargon-free explanations and actionable summaries powered by AI.
-2. **📜 Health Scheme Recommender (`SchemesPage`)**: A smart engine that suggests eligible government health and welfare schemes tailored to the user's demographic and needs.
-3. **🩺 Symptom Checker & Diagnosis (`DiagnosisPage`)**: Input symptoms to receive preliminary AI-driven health guidance and potential next steps.
-4. **🎙️ Multilingual Voice Agent (`VoicePage`)**: Speak to the platform to get instant healthcare answers, making the app highly accessible for users with varying digital literacy levels.
-5. **🔒 Medical Records Vault (`VaultPage`)**: Securely upload and store your medical records (prescriptions, test results) in one centralized location.
-6. **🚑 Locate Hospitals & Doctors (`HospitalsPage`, `DoctorsPage`)**: Find nearby healthcare facilities and available medical professionals seamlessly.
-7. **🌿 Home Remedies (`RemediesPage`)**: Access a curated repository of traditional, safe, and effective home remedies for minor ailments.
-8. **📷 Camera Integration (`CameraPage`)**: Instantly capture and scan prescriptions or medical documents for quick processing.
+## ✨ Key Features
 
-## 📂 Folder Structure
+### 🏥 **AI Medical Report Analysis**
+Upload any medical report (Blood tests, MRI, X-rays) and get a jargon-free, simplified explanation in seconds. Powered by **Gemini 2.0 Flash**, it identifies key parameters, flags abnormalities, and provides actionable health summaries.
 
-```text
-jan-sahayak/
-├── public/                 # Static assets
-├── src/
-│   ├── assets/             # Images and local data files
-│   ├── components/         # React components (Pages & UI elements)
-│   │   ├── BottomNav.jsx
-│   │   ├── CameraPage.jsx
-│   │   ├── DiagnosisPage.jsx
-│   │   ├── DoctorsPage.jsx
-│   │   ├── HomePage.jsx
-│   │   ├── HospitalsPage.jsx
-│   │   ├── MedReportPage.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── RemediesPage.jsx
-│   │   ├── SchemesPage.jsx
-│   │   ├── SponsorBanner.jsx
-│   │   ├── VaultPage.jsx
-│   │   └── VoicePage.jsx
-│   ├── context/            # React Context API
-│   │   └── AppContext.jsx
-│   ├── data/               # Local JSON/Data files
-│   ├── App.jsx             # Main App component router
-│   ├── index.css           # Global CSS styles
-│   └── main.jsx            # Entry point
-├── .env.backup             # Environment variable template
-├── eslint.config.js        # ESLint configuration
-├── index.html              # Main HTML file
-├── package.json            # Project dependencies and scripts
-└── vite.config.js          # Vite framework configuration
-```
+### 🎙️ **Multilingual Voice AI Agent**
+A real-time, low-latency conversational agent that speaks both **English and Hindi**. Built with **ElevenLabs**, it can answer health queries, explain your stored reports, and even suggest government schemes through natural voice interaction.
+
+### 📜 **Smart Scheme Recommender**
+An intelligent engine that matches users with eligible government health and welfare schemes based on their demographics, health conditions, and location. No more digging through complex government portals.
+
+### 🔒 **Secure Medical Vault**
+A centralized, secure repository for all your medical records. Uploaded reports are stored in **Supabase Storage** with metadata persisted in PostgreSQL, ensuring your health history is always at your fingertips.
+
+### 🩺 **AI Symptom Checker & Diagnosis**
+Input your symptoms and receive preliminary guidance. It helps users understand the potential severity of their condition and suggests the next logical steps (like "Consult a GP" or "Visit ER").
+
+### 🚑 **Healthcare Locator**
+Integrated maps and directories to help users find the nearest hospitals, specialized doctors, and 24/7 pharmacies in their vicinity.
+
+---
 
 ## 🛠️ Technology Stack
 
-- **Frontend Core**: React 19.x with Vite for blazing-fast development and build times.
-- **Styling**: Custom CSS focused on a premium, emotion-driven, and highly accessible aesthetic.
-- **AI Integration**: `@google/generative-ai` (Google Gemini) for powering the report analysis, symptom checking, and voice capabilities.
-- **Icons**: `lucide-react` for beautiful, consistent iconography.
-- **State Management**: React Context API (`AppContext`) for global state and toast notifications.
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend** | React 19, Vite, Lucide Icons, Custom Premium CSS (Glassmorphism) |
+| **Backend** | Python 3.x, FastAPI, Uvicorn |
+| **Database & Storage** | Supabase (PostgreSQL, Blob Storage) |
+| **Authentication** | Firebase Auth (Google OAuth) |
+| **AI / ML** | Google Gemini 2.0 Flash (Vision/Text), ElevenLabs Conversational AI |
+| **Deployment** | Vercel (Frontend), Railway/Render (Backend) |
+
+---
+
+## 📂 Project Structure
+
+```text
+Jan-Sahayak/
+├── frontend/               # React (Vite) Single Page Application
+│   ├── src/
+│   │   ├── components/     # UI Pages (MedReport, VoicePage, Schemes, etc.)
+│   │   ├── context/        # Global State (AppContext)
+│   │   ├── lib/            # Firebase & API configurations
+│   │   └── assets/         # Static media and icons
+│   └── package.json        
+├── backend/                # FastAPI (Python) REST API
+│   ├── routes/             # API Endpoints (Reports, Schemes, Agent)
+│   ├── services/           # AI & Logic (Gemini Analyzer, Scheme Matcher)
+│   ├── database.py         # Supabase Client
+│   └── requirements.txt    
+└── README.md
+```
+
+---
 
 ## 🚀 Getting Started
 
-To get the project up and running locally:
-
 ### 1. Prerequisites
+- Node.js (v18+)
+- Python (3.9+)
+- API Keys: Google Gemini, ElevenLabs, Firebase, Supabase
 
-Ensure you have Node.js and npm installed on your system.
-
-### 2. Installation
-
-Clone the repository and install the dependencies:
-
+### 2. Frontend Setup
 ```bash
+cd frontend
 npm install
-```
-
-### 3. Environment Setup
-
-Create a `.env` file in the root directory (you can use `.env.backup` as a reference if available) and add your API keys:
-
-```env
-VITE_GEMINI_API_KEY=your_gemini_api_key_here
-```
-
-### 4. Run Development Server
-
-Start the Vite development server:
-
-```bash
+cp .env.example .env  # Add your API keys here
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173`.
+### 3. Backend Setup
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env      # Add your Supabase & AI keys
+uvicorn main:app --reload
+```
 
-## 👥 Team
+---
+
+## 📡 API Endpoints (Quick Look)
+
+- `GET /api/reports` - Fetch user's medical history.
+- `POST /api/reports/upload` - Upload and analyze a new medical report.
+- `POST /api/schemes/match` - Get eligible schemes based on health profile.
+- `POST /api/agent/tool` - Webhook for ElevenLabs agent to fetch data.
+
+---
+
+## 👥 The Team
 
 - **Anshul**
 - **Harsh Raj**
 
+---
+
 ## 🤝 Contributing
 
-This project was built dynamically during the **Hack Heist Hackathon**. Feel free to fork the repository, open issues, and submit pull requests if you want to expand the platform's vision!
+This project was built in a **36-hour hackathon environment**. We welcome contributions to improve the AI models, add more Indian languages, or integrate deeper with government APIs.
 
 ---
 
-_Built with ❤️ to empower every citizen. A team project'_
+_Built with ❤️ for a Healthier India._
